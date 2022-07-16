@@ -113,6 +113,7 @@ p {
   top: calc(0.5rem - 0.25rem);
   left: calc(73% - 1rem);
   z-index: 99;
+  animation: uploading 0.85s ease-out;
 }
 
 .bar,
@@ -128,6 +129,7 @@ p {
   height: 1.2rem;
   position: absolute;
   z-index: 9;
+  animation: upload 0.8s ease-out;
 }
 
 .gb-0 {
@@ -222,5 +224,27 @@ p {
     border-top: 1rem solid white;
     border-left: 1rem solid transparent;
     border-bottom: 1rem solid transparent;
+  }
+}
+
+/** Keyframes **/
+
+@keyframes upload {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 73%;
+  }
+}
+
+@keyframes uploading {
+  0% {
+    left: 1%;
+  }
+
+  to {
+    left: calc(73% - 1rem);
   }
 }
